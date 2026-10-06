@@ -35,19 +35,12 @@ Inicio
                         {{ tema.descripcion }}
                     </p>
 
-                    {% if tema.id == 1 %}
+                    <a href="{% url 'inicio:detalle_tema' tema.id %}"
+   class="btn btn-primary">
 
-                        <a href="#" class="btn btn-primary">
-                            Ver Tema 1
-                        </a>
+    Ver {{ tema.nombre }}
 
-                    {% else %}
-
-                        <a href="#" class="btn btn-success">
-                            Ver Tema 2
-                        </a>
-
-                    {% endif %}
+</a>
 
                 </div>
 
