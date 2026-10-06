@@ -1,0 +1,62 @@
+{% extends 'inicio_Rincon_Jeremy/base.html' %}
+
+{% block title %}
+Inicio
+{% endblock %}
+
+{% block content %}
+
+<div class="text-center mb-5">
+
+    <h1>Bienvenidos a nuestro proyecto</h1>
+
+    <p>
+        Selecciona uno de los temas para conocer más información.
+    </p>
+
+</div>
+
+
+<div class="row">
+
+    {% for tema in temas %}
+
+        <div class="col-md-6 mb-4">
+
+            <div class="card h-100 shadow">
+
+                <div class="card-body">
+
+                    <h2 class="card-title">
+                        {{ tema.nombre }}
+                    </h2>
+
+                    <p class="card-text">
+                        {{ tema.descripcion }}
+                    </p>
+
+                    {% if tema.id == 1 %}
+
+                        <a href="#" class="btn btn-primary">
+                            Ver Tema 1
+                        </a>
+
+                    {% else %}
+
+                        <a href="#" class="btn btn-success">
+                            Ver Tema 2
+                        </a>
+
+                    {% endif %}
+
+                </div>
+
+            </div>
+
+        </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}
